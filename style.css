@@ -13,12 +13,17 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  background-color: #3a2a2a;
+  background: linear-gradient(270deg, #58246e, #13141a);
+  background-size: 400% 400%;
+  animation: AnimationName;
+  -webkit-animation: AnimationName 30s ease infinite;
 }
 
 .row {
   padding: 30px;
-  background-color: #d41b3f;
+  background: url(purple.jpg);
+  background-position: center;
+  background-size: cover;
   height: 450px;
   color: #333;
   display: flex;
@@ -29,16 +34,20 @@ body {
 
 .row img {
   border-radius: 100%;
-  width: 200px;
+  width: 220px;
   margin-bottom: 10px;
-  border: 5px solid #454545;
+  border: 5px solid #221;
+}
+
+.row img:hover {
+  transform: rotate(360deg);
 }
 
 .row h2 {
-  background: #f0d691;
+  background: #58246e;
   padding: 10px 30px;
   border-radius: 50px;
-  color: #c41b3f;
+  color: #fadf49;
 }
 
 .row-info {
@@ -46,9 +55,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f0d691;
-  margin-top: 50px;
+  color: #fadf49;
+  margin-top: 30px;
   line-height: 2em;
+  background: rgb(88, 42, 108,0.4);
+  border-radius: 100px;
 }
 
 .row-info div {
@@ -60,7 +71,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-left: 1px solid #ed5a64;
+  border-left: 1px solid #1d1d1d;
   text-align: center;
   font-size: 18px;
 }
@@ -71,7 +82,7 @@ body {
 }
 
 .info a {
-  color :#f0d691;
+  color :#fadf49;
   text-decoration: none;
 }
 .row2 {
@@ -98,7 +109,13 @@ body {
 .row2 a:hover {
   transform: scale(1.2);
   background: #222;
-  color: #f0d691;
+  color: #fadf49;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 @media (min-width: 120px) and (max-width: 500px) {
@@ -111,6 +128,7 @@ body {
   flex-direction: column;
   width: 100%;
   margin-top: 10px;
+  background: none;
 }
 
 .row-info div {
@@ -119,7 +137,7 @@ body {
 }
 
 .info {
-  border-top: 1px solid #ed5a64;
+  border-top: 1px solid #1d1d1d;
   border-left: none;
 }
 
